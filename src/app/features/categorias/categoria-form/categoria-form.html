@@ -2,13 +2,14 @@
     <div class="card-body p-4">
         <h2 class="h5 mb-3">Nova categoria</h2>
         <!-- TODO ALUNO: associar [formGroup], formControlName e (ngSubmit) -->
-        <form>
-            <div class="mb-3"><label class="form-label" for="descricao">Descrição</label><input id="descricao"
-                    class="form-control" placeholder="Ex.: Alimentação" disabled>
+        <form [formGroup]="formulario">
+            <div class="mb-3"><label class="form-label" for="descricao">Descrição</label>
+            <input id="descricao"
+                    class="form-control" placeholder="Ex.: Alimentação" formControlName="'descricao">
                 <div class="form-text">Obrigatória, de 3 a 60 caracteres.</div>
             </div>
             <div class="mb-3"><label class="form-label" for="tipo">Tipo</label><select id="tipo" class="form-select"
-                    disabled>
+                    formControlName="tipo">
                     <option>Despesa</option>
                     <option>Receita</option>
                 </select></div>
